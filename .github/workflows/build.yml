@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,10 +19,8 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: resume.tex
-          # If Overleaf shows XeLaTeX instead of pdfLaTeX, uncomment this line:
           latexmk_use_xelatex: true
-          # If Overleaf shows LuaLaTeX instead, uncomment this line:
-          # latexmk_use_lualatex: true
+          latexmk_use_lualatex: true
 
       - name: Set date version
         id: version

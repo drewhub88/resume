@@ -17,7 +17,7 @@ jobs:
         with:
           root_file: resume.tex
           # If Overleaf shows XeLaTeX instead of pdfLaTeX, uncomment this line:
-          # latexmk_use_xelatex: true
+          latexmk_use_xelatex: true
           # If Overleaf shows LuaLaTeX instead, uncomment this line:
           # latexmk_use_lualatex: true
 
